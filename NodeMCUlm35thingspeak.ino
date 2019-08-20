@@ -4,8 +4,8 @@
 
 String apiWritekey = "Q9S9I28NT7T0RZOO";
 #define CHANNEL_ID  568755; 
-const char* ssid = "TP-LINK_4950";
-const char* password = "jerry@451";
+const char* ssid = "**********";
+const char* password = "*********";
  
 const char* server = "api.thingspeak.com";
 float resolution=3.3/1024;
@@ -35,7 +35,7 @@ void setup() {
 }
  
 void loop() {
-  float temp = ((analogRead(A0) * resolution) * 100)-4;
+  float temp = ((analogRead(A0) * resolution) * 100)-4;    // -4 for adjusting tolerence
   if (client.connect(server,80))
   {  
     String tsData = apiWritekey;
